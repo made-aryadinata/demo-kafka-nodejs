@@ -8,7 +8,7 @@ const resolvers = require('./resolvers')
 const typeDefs = require('./schema')
 
 const startServer = async () => {
-  // await connectConsumer(pubSub);
+  await connectConsumer(pubSub);
   const producer = await connectProducer();
   const server = new ApolloServer({
     typeDefs,

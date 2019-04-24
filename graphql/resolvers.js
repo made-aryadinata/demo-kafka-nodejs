@@ -11,7 +11,7 @@ const resolvers = {
   Subscription: {
     notification: {
       subscribe: (root, args, context) => {
-        return context.pubSub.asyncIterator('notification');
+        return context.pubSub.asyncIterator(['notification']);
       }
     }
   }

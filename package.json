@@ -14,7 +14,6 @@
     "graphql": "^14.2.1",
     "kafka-streams": "^4.8.0",
     "sinek": "^7.29.2",
-    "sleep-promise": "^8.0.1",
-    "subscriptions-transport-ws": "^0.9.16"
+    "sleep-promise": "^8.0.1"
   }
 }

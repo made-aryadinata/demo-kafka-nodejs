@@ -13,9 +13,14 @@ consumer.on('error', (error) => console.error(error));
 const connectConsumer = async (pubSub) => {
   await consumer.connect();
   console.info('connected!')
-  consumer.consume(async (message, cb) => {
-    pubSub.publish('notification', { message })
-    await sleep(2000)
+  consumer.consume(async ({ value }, cb) => {
+    console.log(value)
+    pubSub.publish('notification', {
+      notification: {
+        message: value
+      }
+    });
+    cb();
   }, true, false);
 };
 
